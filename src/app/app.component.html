@@ -1,0 +1,9 @@
+<p>{{name}}</p>
+<p *ngIf="name != '王小明'">Name Changed</p>
+<!-- <button (click)="chgName()">change Name</button> -->
+<ul>
+  <app-user-name *ngFor="let el of els; let i=index" [user]="el" [idx]="i+1" (clickUser)="clickedUser($event)"></app-user-name>
+</ul>
+
+  <button (click)="addName()">New Name</button>
+  <input [(ngModel)]="addedName">
